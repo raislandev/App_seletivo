@@ -12,15 +12,12 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
         <style>
             body {
                 margin:  0;
            }
 
-           a{
-               display:flex;
-               text-align:center;
-           }
            
             .page-content {
                 width: 100%;
@@ -49,7 +46,7 @@
                 -ms-border-radius: 8px;
                 -moz-border-radius: 8px;
                 -webkit-border-radius: 8px;
-                margin: 180px 0;
+                margin: 50px 0;
                 font-family: 'Nunito', sans-serif;
                 color: #fff;
                 font-weight: 700;
@@ -108,6 +105,8 @@
             }
             .form-v6-content .form-detail .form-row input:focus {
                 border-bottom: 2px solid #fe892a;
+                box-shadow: 0 0 0 0;
+
             }
             .form-v6-content .form-detail .register {
                 background: #fe892a;
@@ -157,7 +156,7 @@
             /* Responsive */
             @media screen and (max-width: 991px) {
                 .form-v6-content {
-                    margin: 180px 20px;
+                    margin: 50px 20px;
                     flex-direction:  column;
                     -o-flex-direction:  column;
                     -ms-flex-direction:  column;
@@ -195,39 +194,68 @@
                 }
             }
 
+
+            .login{
+                background-image: -moz-linear-gradient( 136deg, rgb(0,0,70) 0%, rgb(28,181,224) 100%);
+                background-image: -webkit-linear-gradient( 136deg, rgb(0,0,70) 0%, rgb(28,181,224) 100%);
+                background-image: -ms-linear-gradient( 136deg, rgb(0,0,70) 0%, rgb(28,181,224) 100%);
+                display:flex;
+                flex-direction:row;
+                justify-content:center;
+                padding:10px 30px 10px 10px;
+                color:white;
+                font-weight:600;
+                text-decoration:none;
+            }
+
+            .login a{
+                padding:10px 30px 10px 10px;
+                color:white;
+                font-weight:600;
+                text-decoration:none;
+            }
+
+            .login .title{
+                flex-grow:1;
+                text-align:center;
+            }
+
+            .invalid-feedback {
+                color:red;
+                font-size:12px;
+                margin-left:15px;
+
+            }
+
+            
         </style>
+
     </head>
     <body class="form-v6">
-   
+        <div class="login">
+            <a class="title">Seja bem vindo ao seletivo 2020!</a>
+            <a  href="{{ route('login') }}">Entrar</a>
+        
+        </div>
+        
         <div class="page-content">
-        <h2>Seja Bem vindo</h2>
             <div class="form-v6-content">
                 <div class="form-left">
-                    <img src="{{ asset('img/form-v6.jpg') }}" alt="form">
-                </div>
-                <form class="form-detail" action="#" method="post">
-                    <h2>Inscreva-se</h2>
-                    <div class="form-row">
-                        <input type="text" name="full-name" id="full-name" class="input-text" placeholder="Nome completo" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="text" name="your-email" id="your-email" class="input-text" placeholder="Email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
-                    </div>
-                    <div class="form-row">
-                        <input type="text" name="colegio" id="colegio" class="input-text" placeholder="Colégio atual" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="text" name="serie" id="serie" class="input-text" placeholder="Ano/série" required>
-                    </div>
-                    <div class="form-row-last">
-                        <input type="submit" name="register" class="register" value="Enviar">
-                    </div>
-                    <div>
-                        <a href="">Login</a>  
-                    </div>
-
-                </form>
+                    <img src="{{ asset('img/logo.png') }}" alt="form">
+                </div>                       
+                @form_component(['action'=>route('students.store'),'method'=>"POST"])
+                  @alert(['msg'=>session('msg'), 'status'=>session('status')])
+    
+                  @endalert 
+                  <h2>Inscreva-se</h2>
+                  @include('admin.students.form')
+                  <div class="form-row-last">
+                    <input type="submit" name="register" class="register" value="Enviar">
+                  </div>
+                @endform_component    
+                
             </div>
         </div>
     </body>
+    
 </html>

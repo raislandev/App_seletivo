@@ -1,0 +1,42 @@
+.login-block{
+    padding : 50px 0;
+}
+    
+.login-container{background:#D3D3D3; border-radius: 10px; height: 40%;}
+.login-sec{padding: 50px 30px; position:relative;}
+.login-sec h2{margin-bottom:30px; font-weight:800; font-size:30px; color: #0069c0;}
+.login-sec h2:after{content:" "; width:100px; height:5px; background:#6ec6ff; display:block; margin-top:20px; border-radius:3px; margin-left:auto;margin-right:auto}
+.btn-login{background: #0069c0; color:#fff; font-weight:600;}
+
+
+
+/* navbar */
+.navbar{
+    background-image: -moz-linear-gradient( 136deg, rgb(0,0,70) 0%, rgb(28,181,224) 100%);
+    background-image: -webkit-linear-gradient( 136deg, rgb(0,0,70) 0%, rgb(28,181,224) 100%);
+    background-image: -ms-linear-gradient( 136deg, rgb(0,0,70) 0%, rgb(28,181,224) 100%);
+}
+
+.nav-item a{
+    color:white !important;
+    font-weight: 800;
+}
+
+.navbar-brand{
+    color:white !important;
+    font-weight: 800;
+}
+
+.navbar-toggler{
+  background-color: white;
+}
+.dropdown-menu  a{
+    color:rgb(66, 63, 63) !important;
+}
+
+
+
+
+
+/* dashboard*/
+
