@@ -14,7 +14,7 @@
 
               
                 @form_component(['action'=>route($routerName.".update",$register->id),'method'=>"PUT"])
-                  @include('admin.'.$routerName.'.form')
+                  @include('admin.'.$routerName.'.form2')
                   <button class="btn btn-primary float-right" >Editar</button>
                 @endform_component
 

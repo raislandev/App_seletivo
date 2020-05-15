@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Validation\Rule;
 use App\Repositories\Contracts\StudentRepositoryInterface;
 
 class StudentController extends Controller
@@ -85,7 +86,7 @@ class StudentController extends Controller
         //$this->model->create($data);
 
         if($this->model->create($data)){
-            $request->session()->flash('msg', 'Registro adicionado com sucesso');
+            $request->session()->flash('msg', 'Registro enviado com sucesso');
             $request->session()->flash('status', 'success');// success error notification
             return redirect()->route('welcome');
             //return redirect()->back();
@@ -158,7 +159,7 @@ class StudentController extends Controller
 
         Validator::make($data, [
             'name' => 'required|string|max:255',
-            'email' => 'required|string|max:255|unique:users',
+            'email' =>['required','string','email','max:255',Rule::unique('students')->ignore($id)],
             'current_college'=>'required|string|max:255',
             'serie' => 'required|string|max:255'
         ])->validate();

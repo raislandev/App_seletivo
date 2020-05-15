@@ -11,7 +11,7 @@
                 @csrf
 
                <div class="form-group">
-                  <label for="exampleInputEmail1" class="text-uppercase">Email</label>
+                  <label for="exampleInputEmail1" >Email</label>
                   <input type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                   @if ($errors->has('email'))
                     <span class="invalid-feedback" role="alert">
@@ -21,7 +21,7 @@
                </div>
 
                <div class="form-group">
-                  <label for="exampleInputPassword1" class="text-uppercase">Senha</label>
+                  <label for="exampleInputPassword1" >Senha</label>
                   <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                   @if ($errors->has('password'))
                     <span class="invalid-feedback" role="alert">

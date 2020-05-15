@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Seletivo</title>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
@@ -58,6 +59,9 @@
                 margin-bottom: -6px;
             }
             .form-v6-content .form-left img {
+                padding-left:20px;
+                padding-top:20px;
+                padding-bottom:20px;
                 border-top-left-radius: 8px;
                 border-bottom-left-radius: 8px;
             }
@@ -81,10 +85,10 @@
                 text-align: center;
             }
             .form-v6-content .form-detail .input-text {
-                margin-bottom: 35px;
+                margin-bottom: 0px;
             }
             .form-v6-content .form-detail input {
-                width: 92%;
+                width: 100%;
                 padding: 0px 15px 10px 15px;
                 border: 2px solid transparent;
                 border-bottom: 2px solid #e5e5e5;
@@ -103,8 +107,12 @@
                 font-weight: 700;
                 color: #333;
             }
+            .form-row{
+                margin-bottom: 25px;
+            }
             .form-v6-content .form-detail .form-row input:focus {
                 border-bottom: 2px solid #fe892a;
+                width:100%;
                 box-shadow: 0 0 0 0;
 
             }
@@ -176,7 +184,7 @@
                     width: auto;
                 }
                 .form-v6-content .form-detail .form-row input {
-                    width: 96%;
+                    width: 100%;
                 }
                 .form-v6-content .form-detail .register {
                     margin-bottom: 80px;
@@ -184,13 +192,13 @@
             }
             @media screen and (max-width: 767px) {
                 .form-v6-content .form-detail .form-row input {
-                    width: 94%;
+                    width: 100%;
                 }
             }
 
             @media screen and (max-width: 575px) {
                 .form-v6-content .form-detail .form-row input {
-                    width: 89%;
+                    width: 100%;
                 }
             }
 
@@ -206,6 +214,7 @@
                 color:white;
                 font-weight:600;
                 text-decoration:none;
+                
             }
 
             .login a{
@@ -257,5 +266,13 @@
             </div>
         </div>
     </body>
+
+    <script>
+       window.setTimeout(function() {
+            $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+       }, 2000);
+    </script>
     
 </html>

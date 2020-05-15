@@ -11,10 +11,10 @@
                         
                         </div>
                     </div>
-                    <img class="img-fluid" src="{{asset('img/portfolio/user.webp')}}" alt="">
+                    <img class="img-fluid" src="{{asset('img/student.webp')}}" alt="">
                 </a>
                 <div class="portfolio-caption">
-                    <h4>Lista de Inscritos</h4>
+                    <h4>Lista de Estudantes</h4>
                     <p class="text-muted">Editar ou Excluir</p>
                 </div>
         </div>
