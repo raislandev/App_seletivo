@@ -34,9 +34,28 @@
     color:rgb(66, 63, 63) !important;
 }
 
+.page-item.active .page-link{
+    background-color: #fd7e14;
+    color: white;
+    border-color: #fd7e14;
+}
 
+.page-link:hover{
+    color:#fd7e14;
+}
 
+.page-link{
+    color:#fd7e14;
+   
+}
 
+footer{
+    background-color: rgb(248, 246, 246);
+    padding-top: 60px;
+    height: 60%;
+    color:black;
+    
+}
 
 /* dashboard*/
 
