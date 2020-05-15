@@ -41,9 +41,6 @@ class StudentController extends Controller
         $page = "Lista de Estudantes";
 
         $routerName = $this->router;
-
-        //$req->session()->flash('msg', 'Ola!');
-        //$req->session()->flash('status', 'notification');// success error notification
         
         $breadcrumb = [
           (object)['url'=>route('home'),'title'=>'Home'], 
@@ -83,18 +80,15 @@ class StudentController extends Controller
             'serie' => 'required|string|max:255'
         ])->validate();
 
-        //$this->model->create($data);
 
         if($this->model->create($data)){
-            $request->session()->flash('msg', 'Registro enviado com sucesso');
+            $request->session()->flash('msg', 'Inscrição realizada com sucesso');
             $request->session()->flash('status', 'success');// success error notification
             return redirect()->route('welcome');
-            //return redirect()->back();
         }else{
             $request->session()->flash('msg', 'erro ao adicionar um registro');
             $request->session()->flash('status', 'error');
             return redirect()->route('welcome');
-            //return redirect()->back();
 
         }
 
