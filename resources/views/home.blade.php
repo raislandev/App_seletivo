@@ -4,7 +4,7 @@
 @page_component(['col'=>12, 'page'=>$page])
     <div id="portfolio">
         <div class="row">
-            <div style="cursor:pointer" onclick="window.location = '{{route('students.index')}}'" class="col-md-4 col-sm-6 portfolio-item">
+            <div style="cursor:pointer" onclick="window.location = '{{route('students.index')}}'" class="col-md-4 col-sm-6 portfolio-item" title="Estudantes Inscritos">
                 <a class="portfolio-link" >
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">

@@ -26,9 +26,9 @@
             @endif        
           @endforeach  
             <td>
-              <a href="{{route($routerName.'.show',$value->id)}}"><i style="color:black" class="material-icons">pageview</i></a>
-              <a href="{{route($routerName.'.edit',$value->id)}}"><i style="color:#fe892a" class="material-icons">create</i></a>
-              <a href="{{route($routerName.'.show',[$value->id,'delete=1'])}}"><i  style="color:red" class="material-icons">delete</i></a>
+              <a title="Detalhes" href="{{route($routerName.'.show',$value->id)}}"><i style="color:black" class="material-icons">pageview</i></a>
+              <a title="Editar" href="{{route($routerName.'.edit',$value->id)}}"><i style="color:#fe892a" class="material-icons">create</i></a>
+              <a title="Excluir" href="{{route($routerName.'.show',[$value->id,'delete=1'])}}"><i  style="color:red" class="material-icons">delete</i></a>
               @if (!empty($phones))
                   <a style="cursor:pointer" data-toggle="modal" data-target="{{'#m'.strval($value->id)}}"><i style="color:blue" class="material-icons">phone</i></a>
               @endif
