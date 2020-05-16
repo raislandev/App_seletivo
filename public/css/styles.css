@@ -51,11 +51,21 @@
 
 footer{
     background-color: rgb(248, 246, 246);
-    padding-top: 60px;
-    height: 60%;
     color:black;
+    position: relative;
+    width: 100%;
+    bottom: 0;
     
 }
 
+
+.login-block{
+    margin-bottom: 30px;
+}
+
+.body-container{
+    margin-top: 40px;
+    margin-bottom: 140px;
+}
 /* dashboard*/
 
