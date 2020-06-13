@@ -73,6 +73,12 @@ class StudentController extends Controller
     {
         $data = $request->all();
 
+        /*foreach ($data as $key => $value) {
+            $data[$key] = htmlspecialchars($value);
+        }*/
+        
+        //dd($data);
+        
         Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|max:255|unique:students',
@@ -150,6 +156,10 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->all();
+
+        /*foreach ($data as $key => $value) {
+            $data[$key] = htmlspecialchars($value);
+        }*/
 
         Validator::make($data, [
             'name' => 'required|string|max:255',
