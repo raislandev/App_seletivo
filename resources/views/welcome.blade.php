@@ -242,7 +242,7 @@
     </head>
     <body class="form-v6">
         <div class="login">
-            <a class="title">Seja bem vindo ao seletivo 2020!</a>
+            <a class="title">Seja bem vindo ao seletivo 2020 heroku!</a>
             <a  href="{{ route('login') }}">Entrar</a>
         
         </div>
