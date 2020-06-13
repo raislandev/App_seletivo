@@ -1,5 +1,5 @@
 @if(!$search && $list)
  <div class="btn btn warning">
-    {{$list}}    
+    {{$list}}
  </div>
 @endif

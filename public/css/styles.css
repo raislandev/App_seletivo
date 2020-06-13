@@ -34,9 +34,38 @@
     color:rgb(66, 63, 63) !important;
 }
 
+.page-item.active .page-link{
+    background-color: #fd7e14;
+    color: white;
+    border-color: #fd7e14;
+}
+
+.page-link:hover{
+    color:#fd7e14;
+}
+
+.page-link{
+    color:#fd7e14;
+   
+}
+
+footer{
+    background-color: rgb(248, 246, 246);
+    color:black;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    
+}
 
 
+.login-block{
+    margin-bottom: 30px;
+}
 
-
+.body-container{
+    margin-top: 40px;
+    margin-bottom: 140px;
+}
 /* dashboard*/
 

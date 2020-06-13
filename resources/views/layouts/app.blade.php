@@ -80,6 +80,17 @@
             @yield('content')
         </main>
     </div>
+     <footer class="footer">
+      <div class="container">
+         <div class="col-md-12">
+            <span class="copyright">Copyright &copy;</span>
+            <li class="list-inline-item">
+                <a href="#">Seletivo 2020</a>
+              </li>
+          </div>
+      </div>
+    </footer>
+    
 </body>
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
